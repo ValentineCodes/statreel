@@ -2,8 +2,8 @@ import { Text, View } from 'native-base'
 import React from 'react'
 import { FlashList } from '@shopify/flash-list';
 
-import Post from '../../../../components/Post'
-import { WINDOW_HEIGHT } from '../../../../utils/dimensions';
+import Post from '../../../../../components/Post'
+import { WINDOW_HEIGHT } from '../../../../../utils/dimensions';
 
 
 type Props = {}

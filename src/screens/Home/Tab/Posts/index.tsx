@@ -3,15 +3,15 @@ import { View } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { WINDOW_WIDTH } from '../../../../utils/dimensions';
 
-import All from './All';
-import Following from './Following';
+import All from './Tab/All';
+import Following from './Tab/Following';
 
-const UploadsTab = createMaterialTopTabNavigator();
+const PostsTab = createMaterialTopTabNavigator();
 
-const Uploads = () => {
+const Posts = () => {
     return (
         <View style={{ flex: 1 }}>
-            <UploadsTab.Navigator
+            <PostsTab.Navigator
                 screenOptions={{
                     tabBarStyle: {
                         backgroundColor: 'transparent',
@@ -29,11 +29,11 @@ const Uploads = () => {
                     tabBarActiveTintColor: '#000',
                     tabBarInactiveTintColor: '#888',
                 }}>
-                <UploadsTab.Screen name="All" component={All} />
-                <UploadsTab.Screen name="Following" component={Following} />
-            </UploadsTab.Navigator>
+                <PostsTab.Screen name="All" component={All} />
+                <PostsTab.Screen name="Following" component={Following} />
+            </PostsTab.Navigator>
         </View>
     );
 };
 
-export default Uploads
+export default Posts

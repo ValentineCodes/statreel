@@ -6,7 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { WINDOW_HEIGHT, WINDOW_WIDTH } from '../../utils/dimensions';
 import { useNavigation } from '@react-navigation/native';
 
-import Uploads from './Tab/Uploads';
+import Posts from './Tab/Posts';
 import Search from './Tab/Search';
 import Post from './Tab/Post';
 import Notifications from './Tab/Notifications';
@@ -39,8 +39,8 @@ const TabNavigator = () => (
             tabBarItemStyle: { marginVertical: 5 },
         }}>
         <HomeTab.Screen
-            name="Uploads"
-            component={Uploads}
+            name="Posts"
+            component={Posts}
             options={{
                 tabBarIcon: ({ focused }) => (
                     <Icon
