@@ -12,13 +12,14 @@ import Post from './Tab/Post';
 import Notifications from './Tab/Notifications';
 import Favorites from './Tab/Favorites';
 import { Button, Text, View } from 'native-base';
+import { W3mButton } from '@web3modal/wagmi-react-native';
 
 
 const Header = () => {
     return (
         <View flexDirection="row" alignItems="center" justifyContent="space-between" px="4" py="2">
             <Text fontSize="xl" fontWeight="semibold">StatReel</Text>
-            <Button>Connect Wallet</Button>
+            <W3mButton />
         </View>
     )
 }
