@@ -14,15 +14,11 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 function Application() {
     return (
-        <Provider store={store}>
-            <PersistGate loading={null} persistor={persistor}>
-                <ToastProvider>
-                    <NativeBaseProvider>
+        // <Provider store={store}>
+        //     <PersistGate loading={null} persistor={persistor}>
                         <App />
-                    </NativeBaseProvider>
-                </ToastProvider>
-            </PersistGate>
-        </Provider>
+        //     </PersistGate>
+        // </Provider>
     );
 }
 

@@ -10,6 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@lens-protocol/react-native-lens-ui-kit": "^0.2.9",
     "@react-native-async-storage/async-storage": "^1.21.0",
     "@react-native-community/netinfo": "^11.2.1",
     "@react-navigation/bottom-tabs": "^6.5.11",
@@ -37,10 +38,11 @@
     "react-native-screens": "^3.29.0",
     "react-native-share": "^10.0.2",
     "react-native-static-safe-area-insets": "^2.2.0",
-    "react-native-svg": "^14.1.0",
+    "react-native-svg": "13.4.0",
     "react-native-tab-view": "^3.5.2",
     "react-native-toast-notifications": "^3.4.0",
     "react-native-vector-icons": "^10.0.3",
+    "react-native-video": "6.0.0-beta.5",
     "react-redux": "^9.1.0",
     "redux-persist": "^6.0.0",
     "viem": "1.21.4",

@@ -6,8 +6,10 @@ import { MenuProvider } from 'react-native-popup-menu';
 
 import '@walletconnect/react-native-compat'
 import { WagmiConfig } from 'wagmi'
-import { mainnet, polygon, arbitrum } from 'viem/chains'
+import { polygon } from 'viem/chains'
 import { createWeb3Modal, defaultWagmiConfig, Web3Modal } from '@web3modal/wagmi-react-native'
+import { NativeBaseProvider } from 'native-base';
+import { LensProvider, Theme } from '@lens-protocol/react-native-lens-ui-kit';
 
 type Props = {
     children: JSX.Element
@@ -26,7 +28,7 @@ const metadata = {
     }
 }
 
-const chains = [mainnet, polygon]
+const chains = [polygon]
 
 const wagmiConfig = defaultWagmiConfig({ chains, projectId, metadata })
 
@@ -40,13 +42,17 @@ createWeb3Modal({
 export default function Providers({ children }: Props) {
     return (
         <WagmiConfig config={wagmiConfig}>
-            <ToastProvider>
-                <MenuProvider>
-                    <SafeAreaProvider>
-                        {children}
-                    </SafeAreaProvider>
-                </MenuProvider>
-            </ToastProvider>
+            <LensProvider theme={Theme.dark}>
+                <ToastProvider>
+                    <NativeBaseProvider>
+                        <MenuProvider>
+                            <SafeAreaProvider>
+                                {children}
+                            </SafeAreaProvider>
+                        </MenuProvider>
+                    </NativeBaseProvider>
+                </ToastProvider>
+            </LensProvider>
             <Web3Modal />
         </WagmiConfig>
     )
