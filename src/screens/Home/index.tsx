@@ -10,7 +10,7 @@ import Posts from './Tab/Posts';
 import Search from './Tab/Search';
 import Post from './Tab/Post';
 import Notifications from './Tab/Notifications';
-import Favorites from './Tab/Favorites';
+import Profile from './Tab/Profile';
 import { Button, Text, View } from 'native-base';
 import { W3mButton } from '@web3modal/wagmi-react-native';
 
@@ -57,7 +57,7 @@ const TabNavigator = () => (
             options={{
                 tabBarIcon: ({ focused }) => (
                     <Icon
-                        name="compass"
+                        name="search"
                         type="ionicon"
                         color={focused ? 'white' : 'grey'}
                         size={WINDOW_WIDTH * 0.06}
@@ -90,8 +90,8 @@ const TabNavigator = () => (
             }}
         />
         <HomeTab.Screen
-            name="Favorites"
-            component={Favorites}
+            name="MyProfile"
+            component={Profile}
             options={{
                 tabBarIcon: ({ focused }) => (
                     <Icon
